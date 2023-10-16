@@ -30,16 +30,15 @@
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#conoceme">Conoceme</a></li>
-
             <li><a href="#skills">Skills</a></li>
             <li><a href="#educacion">Educación</a></li>
-            
             <li><a href="#contacto">Contacto</a></li>
+            <li><button id="cambiar-estilo">Estilo</button></li>
         </ul>
     </div>
 
     <!-- Menú superior para pantallas pequeñas -->
-    <div class="menu-superior">
+    <div class="menu-superior">  
         <div class="menu-imagen">
             <img src="imagenes/IMG_20201128_193907-fotor-20231015112140.png" alt="yo">
         </div>
@@ -55,15 +54,18 @@
     </div>
 
     <div class="content">
-        <!-- Otras secciones de contenido aquí -->
-        <section id="inicio">
-            <h1 class="header-text">Lucas <span class="resaltado">Cometto</span></h1>
-            <a href="https://git.io/typing-svg" class="textomovil">
-                <img src="https://readme-typing-svg.demolab.com?font=Pixelify+Sans&pause=1000&color=FFA500&multiline=true&random=false&width=435&lines=Bienvenido%2Fa+a+mi+portfolio!" alt="Typing SVG" />
-            </a>
-            <a href="https://git.io/typing-svg" class="textomovil">
-                <img src="https://readme-typing-svg.demolab.com?font=Pixelify+Sans&pause=1000&multiline=true&random=false&width=435&lines=Desarrollador+Junior" alt="Typing SVG" />
-            </a>
+        <section id="inicio" class="partidoendos">
+            <div class="inicioizquierda">
+                <h1 class="header-text">Lucas</h1>
+                <h4 class="typewriter-text">Bienvenido/a a mi portfolio!</h4>
+                
+            </div>
+            <div class="inicioderecha">                
+                <h1 class="header-text"><span class="resaltado">Cometto</span></h1>
+                <h4 class="typewriter-text">Desarrollador Junior</h4>
+            </div>
+            
+            
         </section>
         <section id="conoceme">
             <h2>CONOCEME</h2>
@@ -114,9 +116,9 @@
             <a href="https://www.linkedin.com/in/lucas-cometto-397b04293/" target="_blank">
                 
                 <i class="fab fa-linkedin icono-grande"></i>
-            </a>
+            </a> 
 
-            <form id="formulario" class="formulario">
+            <form action="https://formspree.io/f/xzblyknz"  method="post"  id="formulario" class="formulario">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
                 

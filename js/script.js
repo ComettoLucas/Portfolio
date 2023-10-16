@@ -66,3 +66,73 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+/*CAMBIAR COLOR*/ 
+    
+const botonCambioEstilo = document.getElementById("cambiar-estilo");
+let estiloActual = 1;
+
+botonCambioEstilo.addEventListener("click", () => {
+    // Define los estilos de colores en un array
+    const estilosColores = [
+        {
+            '--violeta': '#372963', //fondo
+            '--celeste': '#36BCF7', //letras
+            '--mostaza': '#FFA500', //letras y otros
+            '--violotro': '#25195c' //barra lateral
+        },
+        {
+            '--violeta': '#043652',
+            '--celeste': '#E5DE44',
+            '--mostaza': '#F0810D',
+            '--violotro': '#001826'
+        },
+        {
+            '--violeta': '#202124', //gris
+            '--celeste': '#F3C0AC', //blanco
+            '--mostaza': '#E5E5E5', //crema
+            '--violotro': '#FF0000' //rojo
+        },
+        {
+            '--violeta': '#693B3B',
+            '--celeste': '#67819C8',
+            '--mostaza': '#BA5436',
+            '--violotro': '#A43720'
+        },
+        {
+            '--violeta': '#4F5160',
+            '--celeste': '#F3C0AC',
+            '--mostaza': '#ADBD38',
+            '--violotro': '#588133'
+        },
+         {
+            '--violeta': '#05575B',
+            '--celeste': '#65A4AB',
+            '--mostaza': '#ADBD38',
+            '--violotro': '#003A44'
+        }
+        ,
+         {
+            '--violeta': '#F15C00',
+            '--celeste': '#F6EEE2',
+            '--mostaza': '#F9A602',
+            '--violotro': '#F60128'
+        }
+    ];
+
+    // Cambia las variables CSS
+    document.documentElement.style.setProperty("--violeta", estilosColores[estiloActual]['--violeta']);
+    document.documentElement.style.setProperty("--celeste", estilosColores[estiloActual]['--celeste']);
+    document.documentElement.style.setProperty("--mostaza", estilosColores[estiloActual]['--mostaza']);
+    document.documentElement.style.setProperty("--violotro", estilosColores[estiloActual]['--violotro']);
+
+    // Incrementa el índice del estilo actual
+    estiloActual = (estiloActual + 1) % estilosColores.length;
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const typewriterText = document.querySelector('.typewriter-text');
+
+    // Inicia la animación al cargar la página
+    typewriterText.style.animationPlayState = 'running';
+});
