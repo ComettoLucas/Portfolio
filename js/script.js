@@ -83,6 +83,12 @@ botonCambioEstilo.addEventListener("click", () => {
             '--violotro': '#25195c' //barra lateral
         },
         {
+            '--violeta': '#433f43',
+            '--celeste': ' #78b9c3',
+            '--mostaza': ' #b07300',
+            '--violotro': ' #302b30'
+        },
+        {
             '--violeta': '#043652',
             '--celeste': '#E5DE44',
             '--mostaza': '#F0810D',
@@ -95,10 +101,10 @@ botonCambioEstilo.addEventListener("click", () => {
             '--violotro': '#FF0000' //rojo
         },
         {
-            '--violeta': '#693B3B',
-            '--celeste': '#67819C8',
-            '--mostaza': '#BA5436',
-            '--violotro': '#A43720'
+            '--violeta': '#6D6D6D',
+            '--celeste': '#000000',
+            '--mostaza': '#FFFFFF',
+            '--violotro': '#2A2A2A'
         },
         {
             '--violeta': '#4F5160',
@@ -119,6 +125,8 @@ botonCambioEstilo.addEventListener("click", () => {
             '--mostaza': '#F9A602',
             '--violotro': '#F60128'
         }
+        
+        
     ];
 
     // Cambia las variables CSS
