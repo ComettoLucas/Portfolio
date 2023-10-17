@@ -32,6 +32,10 @@ body {
         border-right: 2px solid #000; /* Línea vertical como si se estuviera escribiendo */
         white-space: nowrap;
         animation: typeWriter 4s steps(20) infinite;
+        color: var(--mostaza);
+    }
+    .otro-color{
+        color: var(--celeste);
     }
 .partidoendos{
     display: flex;
