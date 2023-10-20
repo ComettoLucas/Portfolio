@@ -18,7 +18,7 @@ createApp({
         this.clima = null;
         try {
           // Paso 1: Obtener coordenadas geográficas de la API Geo
-          const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${this.ciudad},${this.estado},${this.pais}&limit=1&appid=${apiKey}`;
+          const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${this.ciudad},${this.estado},${this.pais}&limit=1&appid=${apiKey}`;
           const geoResponse = await fetch(geoUrl);
           const geoData = await geoResponse.json();
 
@@ -27,7 +27,7 @@ createApp({
             const longitud = geoData[0].lon;
 
             // Paso 2: Obtener datos meteorológicos de la API de datos meteorológicos
-            const climaUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=${apiKey}`;
+            const climaUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=${apiKey}`;
             const climaResponse = await fetch(climaUrl);
             this.clima = await climaResponse.json();
           } else {
