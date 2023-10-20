@@ -34,7 +34,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#educacion">Educación</a></li>
             <li><a href="#contacto">Contacto</a></li>
-            <li><button id="cambiar-estilo">Estilo</button></li>
+            <li><button id="cambiar-estilo" class="button">Estilo</button></li>
         </ul>
     </div>
 
@@ -129,19 +129,44 @@
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" required></textarea>
                 
-                <button type="submit">Enviar</button>
+                <button type="submit" class="button">Enviar</button>
             </form>
-        </section>
+
+            </section>
+            <!-- conssumo de api usando vue -->
+            <section>
+            <div id="app">
+                <h2>Búsqueda de Ubicación y Clima</h2>
+                <form @submit.prevent="buscarUbicacionYClima"  class="formulario">
+                  <input type="text" v-model="ciudad" placeholder="Ciudad">
+                  <input type="text" v-model="estado" placeholder="Estado">
+                  <input type="text" v-model="pais" placeholder="País">
+                  <button type="submit" class="button">Buscar</button>
+                </form>
+            
+                <div v-if="clima">
+                  <p>Ubicación: {{ clima.name }}, {{ clima.sys.country }}</p>
+                  <p>Latitud: {{ clima.coord.lat }}</p>
+                  <p>Longitud: {{ clima.coord.lon }}</p>
+                  <p>Temperatura: {{ clima.main.temp }} °C</p>
+                  <p>Humedad: {{ clima.main.humidity }} %</p>
+                  
+                </div>
+              </div>
         
-    </div>
+    
+            </section>
     <div id="diploma-modal" class="modal">
         <span class="close" id="close-modal">&times;</span>
         <img src="" alt="Diploma" id="diploma-image">
     </div>
+    
     <footer class="footer" id="footer">
         <p class="footer__centro">&#169; Lucas Cometto. All rights reserved</p>
     </footer>
     <!-- JavaScript -->
-    <script src="js\script.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- VUE -->
+    <script src="js/script.js"></script>
+    <script src="/js/clima.js"></script>
 </body>
 </html>

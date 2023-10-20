@@ -75,7 +75,7 @@ h2 {
     padding: 0;
     position: fixed;
     height: 100%;
-    
+    z-index: 3;
 }
 
 .barra_lateral img {
@@ -186,9 +186,9 @@ section {
     resize: vertical;
 }
 
-#formulario button,#cambiar-estilo {
+.button {
     background-color: var(--violeta);
-    color: #fff;
+    color: #ffffff;
     padding: 10px 20px;
     border: none;
     border-radius: 3px;
@@ -198,10 +198,12 @@ section {
     font-size: 2vw;
 }
 
-#formulario button:hover,#cambiar-estilo:hover {
+.button:hover {
     background-color:var(--mostaza);
 }
 
+  
+  
 /* Estilos para el pie de página */
 .footer {
     background-color: #373d48;
