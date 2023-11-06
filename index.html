@@ -148,7 +148,7 @@
                   <p>Ubicación: {{ clima.name }}, {{ clima.sys.country }}</p>
                   <p>Latitud: {{ clima.coord.lat }}</p>
                   <p>Longitud: {{ clima.coord.lon }}</p>
-                  <p>Temperatura: {{ clima.main.temp }} °C</p>
+                  <p>Temperatura: {{ (clima.main.temp /10).toFixed(2)}} °C</p>
                   <p>Humedad: {{ clima.main.humidity }} %</p>
                   
                 </div>
