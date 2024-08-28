@@ -62,6 +62,7 @@ h2 {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 3.5vw;
     color: var(--mostaza);
+    
 }
 
 /* Estilos para la barra lateral (en pantallas grandes) */
@@ -100,7 +101,7 @@ h2 {
 }
 
 .barra_lateral li {
-    padding: 1vw;
+    padding: 0.5vw;
 }
 
 /* Estilos para el menú superior en pantallas pequeñas */
@@ -124,7 +125,9 @@ h2 {
 }
 
 .menu-opciones li {
-    
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
     padding: 1vw;
 }
 
@@ -133,9 +136,14 @@ h2 {
 /* Estilos para el contenido principal */
 .content {
     margin-left: 18vw; 
-    padding: 20px;
-    text-align: justify;
+    /*padding: 20px;
+    text-align: justify;*/
     }
+#tarjetitas{
+    display: flex;
+flex-direction: row;
+gap: 1em;
+}
 
 /* Estilos para las secciones */
 section {
