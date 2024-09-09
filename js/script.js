@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const botonCambioEstilo = document.getElementById("cambiar-estilo");
 let estiloActual = 1;
 
-botonCambioEstilo.addEventListener("click", () => {
+//botonCambioEstilo.addEventListener("click", () => {
     // Define los estilos de colores en un array
     const estilosColores = [
         {
@@ -128,8 +128,22 @@ botonCambioEstilo.addEventListener("click", () => {
         
         
     ];
+    function cambiarEstiloAutomatico() {
+        const root = document.documentElement;
+    
+        // Seleccionar un estilo aleatorio del array
+        const estiloAleatorio = estilosColores[Math.floor(Math.random() * estilosColores.length)];
+    
+        // Cambiar cada propiedad CSS en el root
+        Object.keys(estiloAleatorio).forEach(key => {
+            root.style.setProperty(key, estiloAleatorio[key]);
+        });
+    }
+    
+    // Cambiar estilos cada 5 segundos (5000 milisegundos)
+    setInterval(cambiarEstiloAutomatico, 5000);
 
-    // Cambia las variables CSS
+    /*// Cambia las variables CSS
     document.documentElement.style.setProperty("--violeta", estilosColores[estiloActual]['--violeta']);
     document.documentElement.style.setProperty("--celeste", estilosColores[estiloActual]['--celeste']);
     document.documentElement.style.setProperty("--mostaza", estilosColores[estiloActual]['--mostaza']);
@@ -137,7 +151,7 @@ botonCambioEstilo.addEventListener("click", () => {
 
     // Incrementa el índice del estilo actual
     estiloActual = (estiloActual + 1) % estilosColores.length;
-});
+});*/
 document.addEventListener('DOMContentLoaded', function() {
     const typewriterText = document.querySelector('.typewriter-text');
 
